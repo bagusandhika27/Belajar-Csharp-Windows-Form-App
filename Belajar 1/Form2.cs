@@ -123,7 +123,7 @@ namespace Belajar_1
                     cmd = new SqlCommand("INSERT INTO barang VALUES ('" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox3.Text + "', " + textBox4.Text + ", " + textBox5.Text + ")", conn);
                     conn.Open();
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Data Berhasil Ditambah!");
+                    MessageBox.Show("Data Berhasil Ditambah!", "Informasi");
                     loadTable();
                     clearText();
                     autoID();
@@ -156,7 +156,7 @@ namespace Belajar_1
                         {
                             cmd = new SqlCommand("UPDATE barang SET namabarang = '" + textBox2.Text + "', satuan = '" + textBox3.Text + "', harga = " + textBox4.Text + ", stok = " + textBox5.Text + " WHERE kodebarang = '" + textBox1.Text + "'", conn);
                             cmd.ExecuteNonQuery();
-                            MessageBox.Show("Data Berhasil Diubah!");
+                            MessageBox.Show("Data Berhasil Diubah!", "Informasi");
                             conn.Close();
                             loadTable();
                             clearText();
@@ -194,7 +194,7 @@ namespace Belajar_1
                         cmd = new SqlCommand("DELETE FROM barang WHERE kodebarang = '" + textBox1.Text + "'", conn);
                         conn.Open();
                         cmd.ExecuteNonQuery();
-                        MessageBox.Show("Data Berhasil Dihapus!");
+                        MessageBox.Show("Data Berhasil Dihapus!", "Informasi");
                         loadTable();
                         clearText();
                         autoID();
